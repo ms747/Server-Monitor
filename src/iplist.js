@@ -97,10 +97,15 @@ const ip = [
         id: 121
       },
       {
-        ip:"10.10.10.9",
-        name:"virtualstorage",
-        id:200
-    },
+        ip: "10.10.10.9",
+        name: "virtualstorage",
+        id: 200
+      }
     ]
+  },
+  {
+    ip: "10.10.10.10",
+    name: "primarystorage",
+    id: "primarystorage"
   }
 ];
