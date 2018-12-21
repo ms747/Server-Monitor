@@ -51,10 +51,12 @@ io.on("connection", function(socket) {
 		let counter = 0;
         const newData = data.ip.reduce((acc, prev, index) => {
 			if(prev.childs){
+				const children = []
 				prev.childs.forEach(prevchild => {
 					Object.assign(prevchild,{status:newRes[counter++]})
-					acc.push(prevchild)
+					children.push(prevchild)
 				})
+				prev.childs = children
 			}
 			Object.assign(prev,{status:newRes[counter++]})
 			acc.push(prev)
