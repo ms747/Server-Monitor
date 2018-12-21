@@ -72,29 +72,34 @@ const ip = [
         id: 108
       },
       {
-        ip:"10.10.10.110",
-        name:"uappemlrt",
-        id:112
-    },
-    {
-        ip:"10.10.10.111",
-        name:"ushptapp",
-        id:113
-    },
-    {
-        ip:"10.10.10.114",
-        name:"dcrmappeml",
-        id:114
-    },
-    {
-        ip:"10.10.10.130",
-        name:"bitdefender",
-        id:120
-    },
-    {
-        ip:"10.10.10.131",
-        name:"bitdefender2",
-        id:121
+        ip: "10.10.10.110",
+        name: "uappemlrt",
+        id: 112
+      },
+      {
+        ip: "10.10.10.111",
+        name: "ushptapp",
+        id: 113
+      },
+      {
+        ip: "10.10.10.114",
+        name: "dcrmappeml",
+        id: 114
+      },
+      {
+        ip: "10.10.10.130",
+        name: "bitdefender",
+        id: 120
+      },
+      {
+        ip: "10.10.10.131",
+        name: "bitdefender2",
+        id: 121
+      },
+      {
+        ip:"10.10.10.9",
+        name:"virtualstorage",
+        id:200
     },
     ]
   }
