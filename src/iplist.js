@@ -2,6 +2,7 @@ export const ip = [
   {
     ip: "10.10.10.12",
     name: "srv1",
+    id: 1,
     childs: [
       {
         ip: "10.10.10.121",
@@ -18,6 +19,7 @@ export const ip = [
   {
     ip: "10.10.10.13",
     name: "srv2",
+    id:2,
     childs: [
       {
         ip: "10.10.10.104",
@@ -34,6 +36,7 @@ export const ip = [
   {
     ip: "10.10.10.14",
     name: "srv3",
+    id:3,
     childs: [
       {
         ip: "10.10.10.107",
@@ -55,6 +58,7 @@ export const ip = [
   {
     ip: "10.10.10.15",
     name: "srv4",
+    id:4,
     childs: [
       {
         ip: "10.10.10.101",
@@ -106,19 +110,7 @@ export const ip = [
   {
     ip: "10.10.10.10",
     name: "primarystorage",
-    id: "primarystorage"
+    id: 4
   }
 ];
 
-const newIp = ip.reduce((acc, prev, index) => {
-  acc.push(prev.ip);
-  if (prev.childs) {
-      prev.childs.forEach(child => {
-          acc.push(child.ip);
-      });
-  }
-  return acc;
-}, []);
-
-
-export default newIp
