@@ -1,5 +1,6 @@
 import React from "react";
 import { socketConnect } from "reactjs-socket.io";
+import newIp,{ip} from "./iplist";
 
 function Offline() {
   return <span style={{ color: "red" }}>Offline</span>;
@@ -12,9 +13,10 @@ function Online() {
 function List(props) {
 	return (
 		<tbody>
-			{props.status.map(stat => {
+			{props.status.map((stat,index) => {
 				return (
 					<tr key={stat.ip}>
+						<td>{ip[index]}</td>
 						<td>{stat.ip}</td>
 						<td>{stat.state ? <Online/>: <Offline/>}</td>
 					</tr>
@@ -28,7 +30,7 @@ class Status extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			ip: ["10.10.10.12", "10.10.10.121","10.10.10.105","10.10.10.13","10.10.10.104","10.10.10.14","10.10.10.102","10.10.10.107","10.10.10.109","10.10.10.15","10.10.10.101","10.10.10.106","10.10.10.110","10.10.10.111","10.10.10.114","10.10.10.9","10.10.10.11","10.10.10.50","10.10.10.81"],
+			ip: ip,
 
 			status: [],
 		};
@@ -37,9 +39,10 @@ class Status extends React.Component {
 		}, 5000);
 
 		this.props.io.on("status", data => {
-			this.setState({ status: data }, () => {
-				console.log(this.state.status);
-			});
+			console.log(data);
+			// this.setState({ status: data }, () => {
+			// 	console.log(this.state.status);
+			// });
 		});
   }
   

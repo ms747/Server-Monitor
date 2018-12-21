@@ -1,4 +1,4 @@
-const ip = [
+export const ip = [
   {
     ip: "10.10.10.12",
     name: "srv1",
@@ -109,3 +109,16 @@ const ip = [
     id: "primarystorage"
   }
 ];
+
+const newIp = ip.reduce((acc, prev, index) => {
+  acc.push(prev.ip);
+  if (prev.childs) {
+      prev.childs.forEach(child => {
+          acc.push(child.ip);
+      });
+  }
+  return acc;
+}, []);
+
+
+export default newIp
