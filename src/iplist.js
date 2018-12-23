@@ -108,9 +108,14 @@ export const ip = [
     ]
   },
   {
-    ip: "10.10.10.10",
-    name: "primarystorage",
+    ip: "10.10.10.11",
+    name: "primary storage",
     id: 4
+  },
+  {
+    ip: "10.10.10.50",
+    name: "NAS storage",
+    id: 5
   }
 ];
 

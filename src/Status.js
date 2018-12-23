@@ -32,7 +32,7 @@ function List(props) {
                                   return (
                                       <tr key={child.name} className={ip.status ? "table-success" : "table-danger"}>
                                           <td>{child.id}</td>
-                                          <td>{`${ip.name}@${child.name} (${child.ip})`}</td>
+                                          <td>{`${child.name} (${child.ip})`}</td>
                                           <td>
                                               {child.status ? (
                                                   <Online />
