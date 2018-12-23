@@ -16,7 +16,7 @@ function List(props) {
             {props.status.map((ip, index) => {
                 return (
                     <React.Fragment key={ip.name}>
-                        <tr>
+                        <tr className={ip.status ? "table-success" : "table-danger"}>
 							<td>
 								<h3>
 									{ip.id}
@@ -30,7 +30,7 @@ function List(props) {
                         {ip.childs
                             ? ip.childs.map(child => {
                                   return (
-                                      <tr key={child.name}>
+                                      <tr key={child.name} className={ip.status ? "table-success" : "table-danger"}>
                                           <td>{child.id}</td>
                                           <td>{`${ip.name}@${child.name} (${child.ip})`}</td>
                                           <td>
@@ -76,7 +76,7 @@ class Status extends React.Component {
 
     render() {
         return (
-            <table className="table">
+            <table className="table table-bordered table-hover">
                 <thead className="thead-dark">
                     <tr>
                         <th scope="col">ID</th>
